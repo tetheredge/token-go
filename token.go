@@ -37,7 +37,7 @@ func GetSecret(t Token) error {
 	}
 
 	return nil
-	}
+}
 
 // Method used primarily for mocking
 // @params token interface, token claims map[string]interface{}
