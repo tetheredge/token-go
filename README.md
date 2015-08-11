@@ -10,7 +10,7 @@ You'll need to have a few things installed in order to work with this package.
 
 Get started by cloning down the repo that you will need:
 ```shell
-git clone git@github.rackspace.com:backbone/token-go.git
+git clone git@github.com:tetheredge/token-go.git
 ```
 
 Your directory structure should end up looking something like this:
@@ -23,8 +23,8 @@ token/
 
 Update your ~/.gitconfig file to allow go get to work with ssh
 ```shell
-[url "git@github.rackspace.com:"]
-        insteadOf = https://github.rackspace.com/
+[url "git@github.com:"]
+        insteadOf = https://github.com/
 ```
 
 If you are cloning this for the first time, or need to get an update then run
@@ -34,7 +34,7 @@ go get
 # or
 go get -u
 # You also need to setup the environment variable JWT_SECRET to the value
-# in the salt-secrets repo.  This variable is used to sign the token.
+# of you secret key.  This variable is used to sign the token.
 ```
 
 ### How to use this package
@@ -44,7 +44,7 @@ package main
 
 import (
         "fmt"
-        "github.rackspace.com/backbone/token"
+        "github.com/tetheredge/token"
 )
 
 func main() {
