@@ -58,7 +58,7 @@ func ParseTokenFromRequest(t Token, r *http.Request) (*jwt.Token, error) {
 		return nil, err
 	}
 
-	return token, nil 
+	return token, nil
 }
 
 type JwtToken struct {
@@ -130,6 +130,10 @@ func (j *JwtToken) ParseTokenFromRequest(request *http.Request) (*jwt.Token, err
 	t, err := jwt.ParseFromRequest(request, func(token *jwt.Token) (interface{}, error) {
 		if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
 			return nil, fmt.Errorf("Unexpected signing method: %v", token.Header["alg"])
+		}
+
+		if j.secret == "" {
+			j.getSecret()
 		}
 
 		return []byte(j.secret), nil
