@@ -6,7 +6,9 @@ Use this to help minimize the code in your apps that use jwt tokens.
 
 ### Getting Started
 You'll need to have a few things installed in order to work with this package.
-- [Golang](https://golang.org/doc/install)
+- [Golang](https://golang.org/doc/install) Version 1.6 is preferred. If using
+version 1.5, then set the environment variable, GO15VENDOREXPERIMENT=1.  This is
+required to build, install and test code using this package.
 
 Get started by cloning down the repo that you will need:
 ```shell
