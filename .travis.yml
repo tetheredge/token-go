@@ -2,6 +2,7 @@ language: go
 go:
   - 1.6
 install:
-- go install
+- go get
+- go install 
 script:
 - go test -v ./
