@@ -1,6 +1,8 @@
 language: go
 go:
   - 1.6
+env:
+- JWT_SECRET=$JWT_SECRET
 install:
 - go build
 script:
